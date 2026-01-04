@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://너도메인주소.com/sitemap.xml

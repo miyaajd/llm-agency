@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LLM AGENCY</title>
+    <!-- SEO 기본 -->
+    <meta
+      name="description"
+      content="LLM AGENCY — AI/LLM 기반 크리에이티브 & 개발 에이전시. 자동화, 챗봇, 프로덕트 빌드."
+    />
+    <meta
+      name="keywords"
+      content="LLM AGENCY, LLM, AI, agency, automation, chatbot, web development"
+    />
+    <link rel="canonical" href="https://너도메인주소.com/" />
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/llm-favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="images/llm-favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="images/llm-faviconfavicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/llm-favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="images/llm-favicon/site.webmanifest" />
+    <!-- css -->
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- image -->
+    <div
+      class="animation"
+      style="
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      "
+    >
+      <img src="images/img.png" alt="img" style="width: 400px" />
+      <h1>LLM AGENCY</h1>
+    </div>
+    <button class="wave-reveal access">ACCESS ►</button>
+    <!-- 로그인모달 -->
+    <div class="modal">
+      <div class="modal-box">
+        <h2>Emp. No.</h2>
+        <input class="input" type="text" />
+        <button class="next">next</button>
+        <div class="close">✕</div>
+      </div>
+    </div>
+    <!-- 스크립트 -->
+    <script>
+      const accessBtn = document.querySelector(".access");
+      const modal = document.querySelector(".modal");
+      const closeBtn = document.querySelector(".close");
+      const next = document.querySelector(".next");
+      const input = document.querySelector(".input");
+
+      // ACCESS 버튼 클릭 → 모달 열기
+      accessBtn.addEventListener("click", () => {
+        modal.classList.add("active");
+      });
+
+      // X 버튼 클릭 → 모달 닫기
+      closeBtn.addEventListener("click", () => {
+        modal.classList.remove("active");
+      });
+
+      // 배경 클릭 시 닫기 (선택)
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.remove("active");
+        }
+      });
+
+      //   next 누르면 alert
+      next.addEventListener("click", () => {
+        alert("잘못된 접근입니다.");
+        input.value = "";
+        input.focus();
+      });
+    </script>
+  </body>
+</html>
